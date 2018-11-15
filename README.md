@@ -1,6 +1,6 @@
 # SambaBF
-Tool for brute-forcing samba logins. bf_smb_tmux.py is meant to be executed from computers with little amount of RAM<br>
-- it does not use much more RAM than the wordlist it uses to crack the password.
+Tool for brute-forcing samba logins. bf_smb_tmux.py is meant to be executed from computers with little amount of RAM.<br>
+- The script does not use much more RAM than the wordlist it uses to crack the password.
 
 ## Functions:
 ### connect_smb()
