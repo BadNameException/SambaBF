@@ -3,8 +3,6 @@
 # coding=utf-8
 
 from subprocess import Popen, PIPE, check_output
-import time
-import sys
 
 p = 1
 USERNAME = "sigurdkb"
