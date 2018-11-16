@@ -6,7 +6,7 @@ from subprocess import Popen, PIPE, check_output
 
 p = 1
 USERNAME = "sigurdkb"
-IP_ADRESS = "172.16.0.30"
+IP = "172.16.0.30"
 PORT = "445"
 new_results = []
 correct_pw = ""
